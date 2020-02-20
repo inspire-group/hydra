@@ -88,6 +88,7 @@ Some part of this repository are based on:
 * https://github.com/locuslab/smoothing
 * https://github.com/allenai/hidden-networks
 * https://github.com/huanzhang12/CROWN-IBP
+* https://github.com/tcwangshiqi-columbia/symbolic_interval
 
 
 
