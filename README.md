@@ -1,6 +1,6 @@
 # On Pruning Adversarially Robust Neural Networks
 
-Repository with code to reproduce the results in our paper on novel pruning techniques with robust training. This repository supports all four robust training objectives: iterative adversarial training, randomized smoothing, MixTrain, and CROWN-IBP.
+Repository with code to reproduce the results and checkpoints for compressed networks in our paper on novel pruning techniques with robust training. This repository supports all four robust training objectives: iterative adversarial training, randomized smoothing, MixTrain, and CROWN-IBP.
 
 Following is a snippet of key results where we showed that accounting the robust training objective in pruning strategy can lead to large gains in the robustness of pruned networks. 
 
