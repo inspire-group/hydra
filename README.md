@@ -4,13 +4,13 @@ Repository with code to reproduce the results in our paper on novel pruning tech
 
 Following is a snippet of key results where we showed that accounting the robust training objective in pruning strategy can lead to large gains in the robustness of pruned networks. 
 
-​	![...](\images\results_table.png)
+![results_table](\images\results_table.png)
 
 
 
 In particular, the improvement arises from letting the robust training objective controlling which connections to prune. In almost all cases, it prefers to pruned certain high-magnitude weights while preserving other small magnitude weights, which is orthogonal to the strategy in well-established least-weight magnitude (LWM) based pruning. 
 
-![...](\images\weight_histogram.png)
+![weight_histogram](\images\weight_histogram.png)
 
 
 
