@@ -99,38 +99,38 @@ We are releasing pruned models for all three pruning ratios (90, 95, 99%) for al
 
 ### Adversarial training  
 
-| Dataset  | Architecture |                       Pre-trained (0%)                       |                          90% pruned                          |                          95% pruned                          |                          99% pruned                          |
-| :------: | :----------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| CIFAR-10 |    VGG16     | [ckpt](https://www.dropbox.com/sh/1037dxc9m4m6wqs/AAD62kuJRuVaoRFOto_jxKJ2a?dl=0) | [ckpt](https://www.dropbox.com/sh/ugf2xokml5uf9s0/AAALs9dvG5fwejfBFU-RbL0ma?dl=0) | [ckpt](https://www.dropbox.com/sh/xehsrmls76k85y0/AAC-QARNd_b4hJYC5V9QwEJXa?dl=0) | [ckpt](https://www.dropbox.com/sh/8zgknaiv8o19o9k/AAAG2ZncZmhdj-Hz9uM46u-ka?dl=0) |
-| CIFAR-10 |   WRN-28-4   |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |
-|   SVHN   |    VGG16     |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |
-|   SVHN   |   WRN-28-4   |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |
+| Dataset | Architecture |                       Pre-trained (0%)                       |                          90% pruned                          |                          95% pruned                          |                          99% pruned                          |
+| :-----: | :----------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| CIFAR10 |    VGG16     | [ckpt](https://www.dropbox.com/sh/1037dxc9m4m6wqs/AAD62kuJRuVaoRFOto_jxKJ2a?dl=0) | [ckpt](https://www.dropbox.com/sh/ugf2xokml5uf9s0/AAALs9dvG5fwejfBFU-RbL0ma?dl=0) | [ckpt](https://www.dropbox.com/sh/xehsrmls76k85y0/AAC-QARNd_b4hJYC5V9QwEJXa?dl=0) | [ckpt](https://www.dropbox.com/sh/8zgknaiv8o19o9k/AAAG2ZncZmhdj-Hz9uM46u-ka?dl=0) |
+| CIFAR10 |   WRN-28-4   | [ckpt](https://www.dropbox.com/sh/zvqgjd5xx06lh3t/AACT5vYS3S6b33-0uRDjK2Awa?dl=0) | [ckpt](https://www.dropbox.com/sh/b9cyx9ewg5dt981/AADMA9vVVCXe68RwrSZtC9tia?dl=0) | [ckpt](https://www.dropbox.com/sh/cbt8xqq9na4tj1b/AADyPq6J34cUWHB8GvGf_ivDa?dl=0) | [ckpt](https://www.dropbox.com/sh/pjn8thd1fw2pujr/AABcCAH7BEdVrJs0v_gMQ0lTa?dl=0) |
+|  SVHN   |    VGG16     | [ckpt](https://www.dropbox.com/sh/jmo7hj25po0r7tl/AAAw756-U1bifArFr_y1GeSCa?dl=0) | [ckpt](https://www.dropbox.com/sh/7pg0aaguyzndx61/AABqL_8-XFhilpywT9jMHCHqa?dl=0) | [ckpt](https://www.dropbox.com/sh/m3t33ku6aqecv4u/AACykFCWN1-QwbMftvk-a-8na?dl=0) | [ckpt](https://www.dropbox.com/sh/d8il3fpzxvx4uhq/AACZF5GVuV5yzc781Ge5kkD9a?dl=0) |
+|  SVHN   |   WRN-28-4   | [ckpt](https://www.dropbox.com/sh/0o906gxijsk4ruh/AAAAj-mwEnv7uNgildkeMqC-a?dl=0) | [ckpt](https://www.dropbox.com/sh/9hyh3iwnrjwvgon/AAC2a6vZSrN3DvzVaPeBhQ6Ya?dl=0) | [ckpt](https://www.dropbox.com/sh/5hs67w8yh9crhyx/AAB8Q4u_EE9rDlYkTF-bT95Ta?dl=0) | [ckpt](https://www.dropbox.com/sh/l0c1houep3w61b6/AAB9CXmKnOpmLe_VKkwB4Ovaa?dl=0) |
 
 
 
 ### Randomized smoothing
 
-| Dataset  | Architecture | Pre-trained (0%) | 90% pruned | 95% pruned | 99% pruned |
-| :------: | :----------: | :--------------: | :--------: | :--------: | :--------: |
-| CIFAR-10 |    VGG16     |     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |  [ckpt]()  |
-| CIFAR-10 |   WRN-28-4   |     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |  [ckpt]()  |
-|   SVHN   |    VGG16     |     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |  [ckpt]()  |
-|   SVHN   |   WRN-28-4   |     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |  [ckpt]()  |
+| Dataset | Architecture |                       Pre-trained (0%)                       |                          90% pruned                          |                          95% pruned                          |                          99% pruned                          |
+| :-----: | :----------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| CIFAR10 |    VGG16     | [ckpt](https://www.dropbox.com/sh/y5n7000qt7004fu/AAC7eRNUkGQvFfoepwn6tTpaa?dl=0) | [ckpt](https://www.dropbox.com/sh/0pwxek9vom9cywl/AACDZ_-lmhsNK9BG1BlzWpLea?dl=0) | [ckpt](https://www.dropbox.com/sh/pe8mfstkxl621hb/AAAohk6M7o-NwRXUsvk-hLfCa?dl=0) | [ckpt](https://www.dropbox.com/sh/iahysjrj1dekzpw/AAAjvfsE9Xu1P_q23lAF7uNoa?dl=0) |
+| CIFAR10 |   WRN-28-4   | [ckpt](https://www.dropbox.com/sh/4xwjxiyal1o7qr3/AABnCDX5dNin_NeYxmlS9XpLa?dl=0) | [ckpt](https://www.dropbox.com/sh/6jj33youpc41o4o/AAAfjYboGCg9yZc-XYyL3ABza?dl=0) | [ckpt](https://www.dropbox.com/sh/3qqw15yyza5zi6a/AABDVyGvJcCEyWT6kPDOQ-spa?dl=0) | [ckpt](https://www.dropbox.com/sh/m1dvdgedovb19yp/AACxxW-6xArpiVV4cfY7cwAYa?dl=0) |
+|  SVHN   |    VGG16     | [ckpt](https://www.dropbox.com/sh/9k82top60lvngqb/AABAX9wJUBqGmF8akhoWrRA6a?dl=0) | [ckpt](https://www.dropbox.com/sh/7siuxmb6l9d1qt1/AADnA4m4-1k27eZCBkGyU6ena?dl=0) | [ckpt](https://www.dropbox.com/sh/j0eh9jyqpqurvl3/AAAS4awDRQhiyEnNEPNqwlg2a?dl=0) | [ckpt](https://www.dropbox.com/sh/3rnl9uea4cb44vs/AACaTNrTsp5JybLoCAGzid-4a?dl=0) |
+|  SVHN   |   WRN-28-4   | [ckpt](https://www.dropbox.com/sh/m5he7uskva23sfr/AADUlbsXAxuROXFo7Bt2U8R6a?dl=0) | [ckpt](https://www.dropbox.com/sh/hzymmaem17pcr68/AADeFeEZJ4X2fo6WCiqfA1tFa?dl=0) | [ckpt](https://www.dropbox.com/sh/b8kqbkcsmxlhdt9/AABFYwwUHxj3-cnCgL3f0pota?dl=0) | [ckpt](https://www.dropbox.com/sh/g2z07aucy9tw4z8/AABJ1inIcVX2UFdD3e75vjMNa?dl=0) |
 
 
 
 ### Adversarial training on ImageNet (ResNet50)
 
-| Pre-trained (0%) | 95% pruned | 99% pruned |
-| :--------------: | :--------: | :--------: |
-|     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |
+|                       Pre-trained (0%)                       |                          95% pruned                          |                          99% pruned                          |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| [ckpt](https://www.dropbox.com/sh/z9m0mp6jkdp0ovi/AACtN93nnlp-u48WOgeuzb8Ra?dl=0) | [ckpt](https://www.dropbox.com/sh/w003d06uga1ylu4/AADBY9zbz9dgGYi2Ir2ZyINAa?dl=0) | [ckpt](https://www.dropbox.com/sh/i9i1i50een62zae/AAAq-HNkEsYS8dEmQY3sU4ERa?dl=0) |
 
 
 
 ## Contributors
 
-* Vikash Sehwag
-* Shiqi Wang
+* [Vikash Sehwag](https://vsehwag.github.io/)
+* [Shiqi Wang](https://www.cs.columbia.edu/~tcwangshiqi/)
 
 
 
