@@ -95,16 +95,16 @@ Thus, given the checkpoint path of a non-robust network, it aims to find a sub-n
 
 ## Model Zoo (checkpoints for pre-trained and compressed networks)
 
-We are releasing pruned models for all three pruning ratios (90, 95, 99%) for all three datasets used in the paper. In case you want to compare some additional property of pruned models with a baseline, we are also releasing non-pruned i.e., pre-trained networks. Note that, we use input normalization only for the ImageNet dataset. 
+We are releasing pruned models for all three pruning ratios (90, 95, 99%) for all three datasets used in the paper. In case you want to compare some additional property of pruned models with a baseline, we are also releasing non-pruned i.e., pre-trained networks. Note that, we use input normalization only for the ImageNet dataset. For each model, we are releasing two checkpoint: one with masked layers and other with dense layers. 
 
 ### Adversarial training  
 
-| Dataset  | Architecture | Pre-trained (0%) | 90% pruned | 95% pruned | 99% pruned |
-| :------: | :----------: | :--------------: | :--------: | :--------: | :--------: |
-| CIFAR-10 |    VGG16     |     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |  [ckpt]()  |
-| CIFAR-10 |   WRN-28-4   |     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |  [ckpt]()  |
-|   SVHN   |    VGG16     |     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |  [ckpt]()  |
-|   SVHN   |   WRN-28-4   |     [ckpt]()     |  [ckpt]()  |  [ckpt]()  |  [ckpt]()  |
+| Dataset  | Architecture |                       Pre-trained (0%)                       |                          90% pruned                          |                          95% pruned                          |                          99% pruned                          |
+| :------: | :----------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| CIFAR-10 |    VGG16     | [ckpt](https://www.dropbox.com/sh/1037dxc9m4m6wqs/AAD62kuJRuVaoRFOto_jxKJ2a?dl=0) | [ckpt](https://www.dropbox.com/sh/ugf2xokml5uf9s0/AAALs9dvG5fwejfBFU-RbL0ma?dl=0) | [ckpt](https://www.dropbox.com/sh/xehsrmls76k85y0/AAC-QARNd_b4hJYC5V9QwEJXa?dl=0) | [ckpt](https://www.dropbox.com/sh/8zgknaiv8o19o9k/AAAG2ZncZmhdj-Hz9uM46u-ka?dl=0) |
+| CIFAR-10 |   WRN-28-4   |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |
+|   SVHN   |    VGG16     |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |
+|   SVHN   |   WRN-28-4   |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |                           [ckpt]()                           |
 
 
 
