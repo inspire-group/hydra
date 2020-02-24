@@ -97,7 +97,7 @@ Thus, given the checkpoint path of a non-robust network, it aims to find a sub-n
 
 We are releasing pruned models for all three pruning ratios (90, 95, 99%) for all three datasets used in the paper. In case you want to compare some additional property of pruned models with a baseline, we are also releasing non-pruned i.e., pre-trained networks. Note that, we use input normalization only for the ImageNet dataset. 
 
-### Adversarial training
+### Adversarial training  
 
 | Dataset  | Architecture | Pre-trained (0%) | 90% pruned | 95% pruned | 99% pruned |
 | :------: | :----------: | :--------------: | :--------: | :--------: | :--------: |
