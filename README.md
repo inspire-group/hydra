@@ -127,18 +127,6 @@ We are releasing pruned models for all three pruning ratios (90, 95, 99%) for al
 
 
 
-### Robust sub-networks (Exclude it)
-
-The checkpoints corresponds to results presented in Table 4 (section 6.1) of the main paper, where we show the existence of robust sub-networks with non-robust parent networks. For each model, we are releasing both the parent and the subnetwork. Y-axis correspond the training objective used for training the parent-network. X-axis correpond to the objective used for finding the sub-network. 
-
-|                      |         Benign training         |      Adversarial training       |      Randomized smoothing       |
-| :------------------: | :-----------------------------: | :-----------------------------: | :-----------------------------: |
-|   Beningn training   | [Parent-net]()/ [Sub-network]() | [Parent-net]()/ [Sub-network]() | [Parent-net]()/ [Sub-network]() |
-| Adversarial training | [Parent-net]()/ [Sub-network]() | [Parent-net]()/ [Sub-network]() | [Parent-net]()/ [Sub-network]() |
-| Randomized smoothing | [Parent-net]()/ [Sub-network]() | [Parent-net]()/ [Sub-network]() | [Parent-net]()/ [Sub-network]() |
-
-
-
 ## Contributors
 
 * Vikash Sehwag
