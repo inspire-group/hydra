@@ -7,7 +7,7 @@ import shutil, errno
 from distutils.dir_util import copy_tree
 from utils.model import subnet_to_dense
 
-# TODO: save dense model too.
+
 def save_checkpoint(
     state, is_best, args, result_dir, filename="checkpoint.pth.tar", save_dense=False
 ):

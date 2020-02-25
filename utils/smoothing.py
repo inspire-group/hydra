@@ -5,8 +5,6 @@ import numpy as np
 from math import ceil
 from statsmodels.stats.proportion import proportion_confint
 
-# Ref: https://github.com/locuslab/smoothing
-
 
 def eval_quick_smoothing(model, loader, device, sigma=0.25, nbatch=10):
     pred = []

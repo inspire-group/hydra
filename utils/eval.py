@@ -215,25 +215,29 @@ def mixtrain(model, device, val_loader, criterion, args, writer, epoch=0):
             losses.update(loss.item(), images.size(0))
             top1.update(acc1[0], images.size(0))
             top5.update(acc5[0], images.size(0))
-            
+
             rce_avg = 0
             rerr_avg = 0
             for r in range(images.shape[0]):
 
-                rce, rerr = sym_interval_analyze(model, args.epsilon, 
-                        images[r:r+1], target[r:r+1],
-                        use_cuda=torch.cuda.is_available(),
-                        parallel=False)
+                rce, rerr = sym_interval_analyze(
+                    model,
+                    args.epsilon,
+                    images[r : r + 1],
+                    target[r : r + 1],
+                    use_cuda=torch.cuda.is_available(),
+                    parallel=False,
+                )
                 rce_avg = rce_avg + rce.item()
                 rerr_avg = rerr_avg + rerr
-            
-            rce_avg = rce_avg/float(images.shape[0])
-            rerr_avg = rerr_avg/float(images.shape[0])
+
+            rce_avg = rce_avg / float(images.shape[0])
+            rerr_avg = rerr_avg / float(images.shape[0])
 
             # measure accuracy and record loss
             acc1, acc5 = accuracy(output, target, topk=(1, 5))
             sym_losses.update(rce_avg, images.size(0))
-            sym_top1.update((1-rerr_avg)*100., images.size(0))
+            sym_top1.update((1 - rerr_avg) * 100.0, images.size(0))
 
             # measure elapsed time
             batch_time.update(time.time() - end)
@@ -271,22 +275,6 @@ def ibp(model, device, val_loader, criterion, args, writer, epoch=0):
         prefix="Test: ",
     )
 
-    # num_class = 10
-
-    # sa = np.zeros((num_class, num_class - 1), dtype = np.int32)
-    # for i in range(sa.shape[0]):
-    #     for j in range(sa.shape[1]):
-    #         if j < i:
-    #             sa[i][j] = j
-    #         else:
-    #             sa[i][j] = j + 1
-    # sa = torch.LongTensor(sa)
-    # batch_size = args.batch_size*2
-
-    # model = BoundSequential.convert(model,\
-    #         {'same-slope': False, 'zero-lb': False,\
-    #         'one-lb': False}).to(device)
-
     # switch to evaluation mode
     model.eval()
 
@@ -313,40 +301,6 @@ def ibp(model, device, val_loader, criterion, args, writer, epoch=0):
                 use_cuda=torch.cuda.is_available(),
                 parallel=False,
             )
-
-            # model = BoundSequential.convert(model,\
-            #     {'same-slope': False, 'zero-lb': False,\
-            #     'one-lb': False}).to(device)
-
-            # output = model(images, method_opt="forward")
-            # ce = nn.CrossEntropyLoss()(output, target)
-
-            # c = torch.eye(num_class).type_as(images)[target].unsqueeze(1) -\
-            #     torch.eye(num_class).type_as(images).unsqueeze(0)
-            # # remove specifications to self
-            # I = (~(target.unsqueeze(1) ==\
-            #     torch.arange(num_class).to(device).type_as(target).unsqueeze(0)))
-            # c = (c[I].view(images.size(0),num_class-1,num_class)).to(device)
-            # # scatter matrix to avoid compute margin to self
-            # sa_labels = sa[target].to(device)
-            # # storing computed lower bounds after scatter
-            # lb_s = torch.zeros(images.size(0), num_class).to(device)
-            # ub_s = torch.zeros(images.size(0), num_class).to(device)
-
-            # data_ub = torch.min(images + args.epsilon, images.max()).to(device)
-            # data_lb = torch.max(images - args.epsilon, images.min()).to(device)
-
-            # ub, ilb, relu_activity, unstable, dead, alive =\
-            #         model(norm=np.inf, x_U=data_ub, x_L=data_lb,\
-            #         eps=args.epsilon, C=c, method_opt="interval_range")
-            # lb = lb_s.scatter(1, sa_labels, ilb)
-            # print(lb[:2])
-            # robust_ce = nn.CrossEntropyLoss()(-lb, target)
-
-            # print(rce)
-
-            # print(robust_ce)
-            # exit()
 
             # measure accuracy and record loss
             acc1, acc5 = accuracy(output, target, topk=(1, 5))
