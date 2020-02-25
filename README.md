@@ -146,7 +146,7 @@ Some of the code in this repository is based on followng amazing works.
 
 ## Reference
 
-In you find this work helpful, consider citing it. 
+If you find this work helpful, consider citing it. 
 
 
 
