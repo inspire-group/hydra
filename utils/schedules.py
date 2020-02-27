@@ -77,9 +77,9 @@ def step_schedule(optimizer, args):
         a = lr
         if epoch >= 0.75 * epochs:
             a = lr * 0.1
-        elif epoch >= 0.9 * epochs:
+        if epoch >= 0.9 * epochs:
             a = lr * 0.01
-        elif epoch >= epochs:
+        if epoch >= epochs:
             a = lr * 0.001
 
         new_lr(optimizer, a)
