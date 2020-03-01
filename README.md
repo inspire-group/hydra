@@ -147,7 +147,7 @@ Some of the code in this repository is based on followng amazing works.
 ## Reference
 
 If you find this work helpful, consider citing it. 
-`@article{sehwag2020pruning,
+```@article{sehwag2020pruning,
   title={On Pruning Adversarially Robust Neural Networks},
   author={Sehwag, Vikash and Wang, Shiqi and Mittal, Prateek and Jana, Suman},
   journal={arXiv preprint arXiv:2002.10509},
