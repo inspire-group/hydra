@@ -152,6 +152,4 @@ If you find this work helpful, consider citing it.
   author={Sehwag, Vikash and Wang, Shiqi and Mittal, Prateek and Jana, Suman},
   journal={arXiv preprint arXiv:2002.10509},
   year={2020}
-}`
-
-
+}
