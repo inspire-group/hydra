@@ -14,6 +14,7 @@ In particular, the improvement arises from letting the robust training objective
 
 ## Updates
 **April 30, 2020**: [Checkpoints for WRN-28-10](https://www.dropbox.com/sh/56yyfy16elwbnr8/AADmr7bXgFkrNdoHjKWwIFKqa?dl=0), a common network for benchmarking adv. robustness | 90% pruned with proposed technique | Benign test accuracy = 88.97% , PGD-50 test accuracy = 62.24%. 
+
 **May 23, 2020**: Our WRN-28-10 network with 90% connection pruning comes at the second place in the [auto-attack robustness benchmark](https://github.com/fra31/auto-attack). 
 
 ## Getting started
