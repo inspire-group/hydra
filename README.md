@@ -137,7 +137,7 @@ We are releasing pruned models for all three pruning ratios (90, 95, 99%) for al
 
 
 
-Some of the code in this repository is based on followng amazing works.
+Some of the code in this repository is based on following amazing works.
 
 * https://github.com/allenai/hidden-networks
 * https://github.com/yaircarmon/semisup-adv
