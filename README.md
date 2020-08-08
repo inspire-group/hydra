@@ -15,11 +15,11 @@ In particular, the improvement arises from letting the robust training objective
 ## Updates
 **April 30, 2020**: [Checkpoints for WRN-28-10](https://www.dropbox.com/sh/56yyfy16elwbnr8/AADmr7bXgFkrNdoHjKWwIFKqa?dl=0), a common network for benchmarking adv. robustness | 90% pruned with proposed technique | Benign test accuracy = 88.97% , PGD-50 test accuracy = 62.24%. 
 
-**May 23, 2020**: Our WRN-28-10 network with 90% connection pruning comes at the second place in the [auto-attack robustness benchmark](https://github.com/fra31/auto-attack). 
+**May 23, 2020**: Our WRN-28-10 network with 90% connection pruning comes in the second place in the [auto-attack robustness benchmark](https://github.com/fra31/auto-attack). 
 
 ## Getting started
 
-Let's start with installing all dependencies. 
+Let's start by installing all dependencies. 
 
 `pip install -r requirement.txt`
 
@@ -33,7 +33,7 @@ We will use `train.py` for all our experiments on the CIFAR-10 and SVHN dataset.
 
 
 
-Following [this](https://github.com/allenai/hidden-networks) work, we modify the convolution layer to have an internal mask. We can use masked convolution layer with `--layer-type=subnet`. The argument `k` refers to the fraction of non-pruned connections.
+Following [this](https://github.com/allenai/hidden-networks) work, we modify the convolution layer to have an internal mask. We can use a masked convolution layer with `--layer-type=subnet`. The argument `k` refers to the fraction of non-pruned connections.
 
 
 
@@ -51,7 +51,7 @@ In pruning steps, we will essentially freeze weights of the network and only upd
 
 `python train.py --arch wrn_28_4 --exp-mode prune --configs configs.yml --trainer adv --val_method adv --k 0.01 --scaled-score-init --source-net pretrained_net_checkpoint_path --epochs 20 --save-dense`
 
-It used 20 epochs to optimize for better pruned networks following the proposed scaled initialization of importance scores. It also saves a checkpoint of pruned with dense layers i.e, throws aways masks form each layer after multiplying it with weights. These dense checkpoints are helpful as they are directly loaded in a model based on standard layers from torch.nn. 
+It used 20 epochs to optimize for better-pruned networks following the proposed scaled initialization of importance scores. It also saves a checkpoint of pruned with dense layers i.e, throws aways masks form each layer after multiplying it with weights. These dense checkpoints are helpful as they are directly loaded in a model based on standard layers from torch.nn. 
 
 
 
@@ -75,7 +75,7 @@ The only difference from fine-tuning from previous steps is the now we initializ
 
 ## Bringing it all together
 
-We can use following scripts to obtain compact network from both LWM and proposed prunign techniques. 
+We can use the following scripts to obtain compact networks from both LWM and proposed pruning techniques. 
 
 - `get_compact_net_adv_train.sh`: Compact networks with iterative adversarial training. 
 - `get_compact_net_rand_smoothing.sh` Compact networks with randomized smoothing.
@@ -98,7 +98,7 @@ Thus, given the checkpoint path of a non-robust network, it aims to find a sub-n
 
 ## Model Zoo (checkpoints for pre-trained and compressed networks)
 
-We are releasing pruned models for all three pruning ratios (90, 95, 99%) for all three datasets used in the paper. In case you want to compare some additional property of pruned models with a baseline, we are also releasing non-pruned i.e., pre-trained networks. Note that, we use input normalization only for the ImageNet dataset. For each model, we are releasing two checkpoint: one with masked layers and other with dense layers. Note that the numbers from these checkpoints might differ a little bit from the ones reported in the paper.
+We are releasing pruned models for all three pruning ratios (90, 95, 99%) for all three datasets used in the paper. In case you want to compare some additional property of pruned models with a baseline, we are also releasing non-pruned i.e., pre-trained networks. Note that, we use input normalization only for the ImageNet dataset. For each model, we are releasing two checkpoints: one with masked layers and other with dense layers. Note that the numbers from these checkpoints might differ a little bit from the ones reported in the paper.
 
 ### Adversarial training  
 
@@ -137,7 +137,7 @@ We are releasing pruned models for all three pruning ratios (90, 95, 99%) for al
 
 
 
-Some of the code in this repository is based on following amazing works.
+Some of the code in this repository is based on the following amazing works.
 
 * https://github.com/allenai/hidden-networks
 * https://github.com/yaircarmon/semisup-adv
