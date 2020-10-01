@@ -154,6 +154,6 @@ If you find this work helpful, consider citing it.
 @article{sehwag2020pruning,
   title={On Pruning Adversarially Robust Neural Networks},
   author={Sehwag, Vikash and Wang, Shiqi and Mittal, Prateek and Jana, Suman},
-  journal={arXiv preprint arXiv:2002.10509},
+  journal={Advances in Neural Information Processing Systems (NeurIPS)},
   year={2020}
 }
