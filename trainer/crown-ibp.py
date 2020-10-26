@@ -15,7 +15,6 @@ from crown.eps_scheduler import EpsilonScheduler
 from crown.bound_layers import BoundSequential, BoundLinear, BoundConv2d, BoundDataParallel, Flatten
 
 
-# TODO: add adversarial accuracy.
 def train(
     model, device, train_loader, sm_loader, criterion, optimizer, epoch, args, writer
 ):
@@ -65,10 +64,6 @@ def train(
                     {'same-slope': False, 'zero-lb': False,\
                     'one-lb': False}).to(device)
 
-    # for layer in model:
-    #     if isinstance(layer, nn.Conv2d):
-    #         print(layer.weight.sum())
-
     model.train()
     end = time.time()
 
@@ -116,8 +111,6 @@ def train(
         ub, ilb, relu_activity, unstable, dead, alive =\
                 model(norm=np.inf, x_U=data_ub, x_L=data_lb,\
                 eps=eps, C=c, method_opt="interval_range")
-        # import pdb
-        # pdb.set_trace()
 
         crown_final_beta = 0.
         beta = (args.epsilon - eps * (1.0 - crown_final_beta)) / args.epsilon
@@ -149,17 +142,10 @@ def train(
         losses.update(ce.item(), images.size(0))
         ibp_losses.update(robust_ce.item(), images.size(0))
         ibp_acc1.update(racc[0].item(), images.size(0))
-        #print(acc1[0].item(), ce.item(), robust_ce.item(), racc[0])
-        # print(model[0].weight.sum(), model[0].layer.weight.sum(),\
-        #         model[0].layer.w.sum())
         
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        # for layer in model:
-        #     if isinstance(layer, nn.Conv2d):
-        #         print(layer.weight.sum())
-        # exit()
 
         # measure elapsed time
         batch_time.update(time.time() - end)
