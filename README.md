@@ -151,9 +151,10 @@ Some of the code in this repository is based on the following amazing works.
 
 If you find this work helpful, consider citing it. 
 ```
-@article{sehwag2020pruning,
-  title={On Pruning Adversarially Robust Neural Networks},
+@article{sehwag2020hydra,
+  title={Hydra: Pruning adversarially robust neural networks},
   author={Sehwag, Vikash and Wang, Shiqi and Mittal, Prateek and Jana, Suman},
-  journal={Advances in Neural Information Processing Systems (NeurIPS)},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
   year={2020}
 }
