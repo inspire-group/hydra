@@ -1,6 +1,6 @@
 # HYDRA: Pruning Adversarially Robust Neural Networks (NeurIPS 2020)
 
-Repository with code to reproduce the results and checkpoints for compressed networks in our paper on novel pruning techniques with robust training. This repository supports all four robust training objectives: iterative adversarial training, randomized smoothing, MixTrain, and CROWN-IBP.
+Repository with code to reproduce the results and checkpoints for compressed networks in [our paper on novel pruning techniques with robust training](https://arxiv.org/abs/2002.10509). This repository supports all four robust training objectives: iterative adversarial training, randomized smoothing, MixTrain, and CROWN-IBP.
 
 Following is a snippet of key results where we showed that accounting the robust training objective in pruning strategy can lead to large gains in the robustness of pruned networks. 
 
