@@ -96,7 +96,7 @@ class CIFAR100:
 
     def data_loaders(self, **kwargs):
         trainset = datasets.CIFAR100(
-            root=os.path.join(self.args.data_dir, "CIFAR10"),
+            root=os.path.join(self.args.data_dir, "CIFAR100"),
             train=True,
             download=True,
             transform=self.tr_train,
@@ -112,8 +112,8 @@ class CIFAR100:
             sampler=SubsetRandomSampler(subset_indices),
             **kwargs,
         )
-        testset = datasets.CIFAR10(
-            root=os.path.join(self.args.data_dir, "CIFAR10"),
+        testset = datasets.CIFAR100(
+            root=os.path.join(self.args.data_dir, "CIFAR100"),
             train=False,
             download=True,
             transform=self.tr_test,
