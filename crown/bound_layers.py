@@ -469,12 +469,14 @@ class BoundSequential(Sequential):
         for l in seq_model:
             if isinstance(l, Linear):
                 layers.append(BoundLinear.convert(l, bound_opts))
-            if isinstance(l, Conv2d):
+            elif isinstance(l, Conv2d):
                 layers.append(BoundConv2d.convert(l, bound_opts))
-            if isinstance(l, ReLU):
+            elif isinstance(l, ReLU):
                 layers.append(BoundReLU.convert(l, layers[-1], bound_opts))
-            if isinstance(l, Flatten):
+            elif isinstance(l, Flatten):
                 layers.append(BoundFlatten(bound_opts))
+            else:
+                raise NotImplementedError(f"We do not support to convert {type(l)} to the bounded layer.")
         return BoundSequential(*layers)
 
     ## The __call__ function is overwritten for DataParallel
